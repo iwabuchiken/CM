@@ -84,7 +84,13 @@ class MusicsController < ApplicationController
   def test1_post
       data = params[:test_data]
       
-      if data != nil
+      @music = Music.new
+      
+      @music.file_name = data
+      
+      
+      
+      if data != nil and @music.save
         
         render text: data + " => OK"
         
