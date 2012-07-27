@@ -1,4 +1,8 @@
 CM::Application.routes.draw do
+  resources :memos
+
+  resources :musics
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

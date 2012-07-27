@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Text:</b>
+  <%= @memo.text %>
+</p>
+
+<p>
+  <b>Music:</b>
+  <%= @memo.music_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_memo_path(@memo) %> |
+<%= link_to 'Back', memos_path %>

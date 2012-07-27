@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>File name:</b>
+  <%= @music.file_name %>
+</p>
+
+<p>
+  <b>File path:</b>
+  <%= @music.file_path %>
+</p>
+
+<p>
+  <b>Duration:</b>
+  <%= @music.duration %>
+</p>
+
+<p>
+  <b>Date added:</b>
+  <%= @music.date_added %>
+</p>
+
+<p>
+  <b>Date modified:</b>
+  <%= @music.date_modified %>
+</p>
+
+<p>
+  <b>File info:</b>
+  <%= @music.file_info %>
+</p>
+
+<p>
+  <b>Memo self:</b>
+  <%= @music.memo_self %>
+</p>
+
+<p>
+  <b>Located at:</b>
+  <%= @music.located_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_music_path(@music) %> |
+<%= link_to 'Back', musics_path %>

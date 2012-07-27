@@ -44,41 +44,50 @@ git add .
 
 git commit -a
 
-git remote add origin git@github.com:iwabuchiken/NewsReader3.git
+git remote add origin git@github.com:iwabuchiken/CM.git
 
 g p origin master
 
 ### BROWSE GitHub	###
 
 [heroku ]
-gem install heroku --no-ri --no-rdoc
 
 # Successfully installed excon-0.14.3
 # Successfully installed heroku-api-0.2.7
 # Successfully installed heroku-2.28.10
 # 3 gems installed
 
+gem install heroku --no-ri --no-rdoc
 heroku keys:add
-
 heroku create --stack cedar
-
-heroku rename cosmos-news-reader-3
+heroku rename cosmos-cm
 
 g p heroku master
+
+heroku open
 
 /git remote rm heroku
 /gem uninstall heroku (2.28.10)
 
 /git remote add heroku git@heroku.com:cosmos-english-reader.git
 
-heroku open
 
 [/Set up ]----------------------------
 
 [Model: Article: 20120710_172354]-------------------------------
-# rails generate scaffold Article line:text url:string src:string news_time:string genre:string cat:string subcat:string tag:string memo:text
+rails generate scaffold Article line:text url:string src:string news_time:string genre:string cat:string subcat:string tag:string memo:text
 
-# bundle exec rake db:migrate
+#*rails generate scaffold Music file_name:string file_path:string duration:integer date_added:integer date_modified:integer file_info:text memo_self:text located_at:string
+
+#*rails generate scaffold Memo text:text music_id:integer
+
+#*bundle exec rake db:migrate
+
+### Browse local ###
+
+g a .
+g c -a
+
 
 heroku run rake db:migrate
 

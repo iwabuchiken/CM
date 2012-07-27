@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  file_name: MyString
+  file_path: MyString
+  duration: 1
+  date_added: 1
+  date_modified: 1
+  file_info: MyText
+  memo_self: MyText
+  located_at: MyString
+
+two:
+  file_name: MyString
+  file_path: MyString
+  duration: 1
+  date_added: 1
+  date_modified: 1
+  file_info: MyText
+  memo_self: MyText
+  located_at: MyString
