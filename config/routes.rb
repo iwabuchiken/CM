@@ -3,6 +3,9 @@ CM::Application.routes.draw do
 
   resources :musics
 
+
+  post "test1_post" => "musics#test1_post"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

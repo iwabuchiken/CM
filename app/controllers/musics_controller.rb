@@ -80,4 +80,20 @@ class MusicsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def test1_post
+      data = params[:test_data]
+      
+      if data != nil
+        
+        render text: data + " => OK"
+        
+      else
+        
+        render text: "Not OK"
+        
+      end
+    
+  end#def test1_post
+
 end

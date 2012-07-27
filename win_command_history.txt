@@ -88,21 +88,17 @@ rails generate scaffold Article line:text url:string src:string news_time:string
 g a .
 g c -a
 
+#*g p origin master
 
-heroku run rake db:migrate
+#*g p heroku master
 
+#*heroku run rake db:migrate
 
 bundle update
 
+**next**
 
-[Model: Genre 20120711_002405]-------------------------------
-rails generate scaffold Genre name:string
 
-bundle exec rake db:migrate
-
-*push
-
-heroku run rake db:migrate
 
 =======================================================
 [Add column: Article 20120711_065652]-------------------------------
