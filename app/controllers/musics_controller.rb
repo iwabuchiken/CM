@@ -102,4 +102,25 @@ class MusicsController < ApplicationController
     
   end#def test1_post
 
+  def test2_post_json
+      data = params[:test_json][:file_name]
+      
+      @music = Music.new
+      
+      @music.file_name = data
+      
+      
+      
+      if data != nil and @music.save
+        
+        render text: data + " => OK"
+        
+      else
+        
+        render text: "Not OK"
+        
+      end
+    
+  end#def test2_post_json
+
 end
