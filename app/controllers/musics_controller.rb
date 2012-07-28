@@ -127,4 +127,78 @@ class MusicsController < ApplicationController
     
   end#def test2_post_json
 
+  def test3_post_json
+      
+      data = params[:test_json]
+      
+      # if data != nil
+      if data == nil
+          render text: "No data"
+          
+          return
+      end
+      
+      # Flag
+      result = true
+      
+      # begin
+          # Save data
+          data.each do |item|
+              file_name = item[:file_name]
+              file_path = item[:file_path]
+              
+              @music = Music.new
+              
+              @music.file_name = file_name
+              @music.file_path = file_path
+              
+              if !@music.save
+                 if result == true
+                    result = false
+                 end 
+              end
+              
+          end#data.each do |item|
+      # rescue
+#         
+          # render text: "Exception!"
+#           
+          # return
+#           
+      # end#begin
+      
+      
+      
+      # Return
+      if result == true
+          render text: "OK"
+      else
+          render text: "Not OK"
+      end
+      
+      
+          # data = params[:test_json][:file_name]
+#           
+          # file_path = params[:test_json][:file_path]
+#           
+          # @music = Music.new
+#           
+          # @music.file_name = data
+#           
+          # if file_path != nil
+            # @music.file_path = file_path
+          # end
+#           
+          # if data != nil and @music.save
+#             
+            # render text: data + " => OK"
+#             
+          # else
+#             
+            # render text: "Not OK"
+#             
+          # end
+    
+  end#def test3_post_json
+
 end

@@ -7,6 +7,10 @@ CM::Application.routes.draw do
   post "test1_post" => "musics#test1_post"
 
   post "test2_post_json" => "musics#test2_post_json"
+  
+  post "test3_post_json" => "musics#test3_post_json"
+  
+  root to: "musics#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

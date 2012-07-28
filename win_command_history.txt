@@ -24,11 +24,13 @@ cd NewsReader
 
 copy C:\WORKS\WORKSPACES_APTANA\ChineseReader\.project .
 
+sakura .project
+
 ### EDIT .project#name	###
 
 ### IMPORT TO APTANA	###
 
-copy C:\WORKS\WORKSPACES_APTANA\ChineseReader\win_command_history.txt .
+copy C:\WORKS\WORKSPACES_APTANA\CM\win_command_history.txt .
 
 #*copy C:\WORKS\WORKSPACES_APTANA\ChineseReader\Gemfile .
 
