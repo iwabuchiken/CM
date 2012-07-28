@@ -105,11 +105,15 @@ class MusicsController < ApplicationController
   def test2_post_json
       data = params[:test_json][:file_name]
       
+      file_path = params[:test_json][:file_path]
+      
       @music = Music.new
       
       @music.file_name = data
       
-      
+      if file_path != nil
+        @music.file_path = file_path
+      end
       
       if data != nil and @music.save
         
