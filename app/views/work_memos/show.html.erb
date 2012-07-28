@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Text:</b>
+  <%= @work_memo.text %>
+</p>
+
+<p>
+  <b>Work:</b>
+  <%= @work_memo.work_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_work_memo_path(@work_memo) %> |
+<%= link_to 'Back', work_memos_path %>

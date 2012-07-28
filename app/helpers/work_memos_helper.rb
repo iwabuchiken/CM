@@ -1,0 +1,2 @@
+module WorkMemosHelper
+end

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Serial num:</b>
+  <%= @work.serial_num %>
+</p>
+
+<p>
+  <b>Music:</b>
+  <%= @work.music_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_work_path(@work) %> |
+<%= link_to 'Back', works_path %>

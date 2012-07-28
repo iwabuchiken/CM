@@ -1,4 +1,8 @@
 CM::Application.routes.draw do
+  resources :work_memos
+
+  resources :works
+
   resources :memos
 
   resources :musics

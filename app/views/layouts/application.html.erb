@@ -7,8 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+	
+	<%= yield %>
+	
+	
+	<hr />
+	
+	<%= link_to_unless_current "Musics", musics_path %> | 
+	<%= link_to_unless_current "Memos", memos_path %> | 
+	<%= link_to_unless_current "Works", works_path %> | 
+	<%= link_to_unless_current "Work memos", work_memos_path %> | 
+	
 </body>
 </html>
