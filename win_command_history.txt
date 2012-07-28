@@ -99,12 +99,14 @@ g c -a
 
 bundle update
 
-**next**
 rails generate scaffold Work serial_num:string music_id:integer
 rails generate scaffold WorkMemo text:string work_id:integer
 
 bundle exec rake db:migrate
 
+heroku run rake db:migrate
+
+**next**
 
 =======================================================
 [Add column: Article 20120711_065652]-------------------------------
