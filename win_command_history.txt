@@ -111,6 +111,7 @@ rake db:seed
 **next**
 rails generate migration AddColumnMusicsWorkId
 
+heroku run rake db:migrate
 
 =======================================================
 [Add column: Article 20120711_065652]-------------------------------
