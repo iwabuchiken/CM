@@ -2,29 +2,13 @@
 
 <table>
   <tr>
-  	<th>Id</th>
-  	<th>Title</th>
-    <th>Serial num</th>
-    <th>Music</th>
-    <th></th>
+  	
+  	<%= render 'list_works_header' %>
+  	
   </tr>
 
-<% @works.each do |work| %>
-  <tr>
-  	<td><%= work.id %></td>
-  	<td><%= work.title %></td>
-    <td><%= link_to work.serial_num, work %></td>
-    <td><%= work.music_id %>(
-    	<% if work.music != nil %>
-    		<%= work.music.file_name %>
-		<% else %>
-			No data
-		<% end %>
-    	
-    	)</td>
-    <td><%= link_to 'Destroy', work, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
+	<%= render 'list_works' %>
+
 </table>
 
 <br />

@@ -2,7 +2,19 @@ class WorksController < ApplicationController
   # GET /works
   # GET /works.json
   def index
-    @works = Work.all
+    # @works = Work.all
+    
+    sort_format = params[:sort]
+    
+    if sort_format != nil
+      
+      @works = Work.find(:all, :order => sort_format)
+      
+    else
+      
+      @works = Work.all
+      
+    end
 
     respond_to do |format|
       format.html # index.html.erb
