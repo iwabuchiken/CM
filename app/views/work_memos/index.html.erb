@@ -2,19 +2,26 @@
 
 <table>
   <tr>
+  	<th>Id</th>
     <th>Text</th>
     <th>Work</th>
-    <th></th>
-    <th></th>
     <th></th>
   </tr>
 
 <% @work_memos.each do |work_memo| %>
   <tr>
-    <td><%= work_memo.text %></td>
-    <td><%= work_memo.work_id %></td>
-    <td><%= link_to 'Show', work_memo %></td>
-    <td><%= link_to 'Edit', edit_work_memo_path(work_memo) %></td>
+  	<td><%= work_memo.id %></td>
+    <td><%= link_to work_memo.text work_memo %></td>
+    
+    <td>
+    	<% if work_memo.work_id != nil %>
+    		<%= work_memo.work.serial_num %>
+		<% else %>
+			No data
+		<% end %>
+    	
+	</td>
+
     <td><%= link_to 'Destroy', work_memo, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>

@@ -108,8 +108,19 @@ heroku run rake db:migrate
 
 rake db:seed
 
+[20120808_140522]-------------------------------
 **next**
-rails generate migration AddColumnMusicsWorkId
+#*rails generate migration AddColumnMusicsWorkId
+
+#*heroku run rake db:migrate
+
+rails generate migration AddColumnWorkTitle
+
+$$$ Edit: $$$
+
+bundle exec rake db:migrate
+
+$$$ commit, c/o, merge, push o, push h $$$
 
 heroku run rake db:migrate
 

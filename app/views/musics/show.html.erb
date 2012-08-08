@@ -16,6 +16,17 @@
 </p>
 
 <p>
+  <b>Work:</b>
+
+      	<% if @music.work_id != nil %>
+    		<%= @music.work_id %>
+		<% else %>
+			No data
+		<% end %>
+  
+</p>
+
+<p>
   <b>Date added:</b>
   <%= @music.date_added %>
 </p>

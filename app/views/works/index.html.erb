@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+  	<th>Id</th>
     <th>Serial num</th>
     <th>Music</th>
     <th></th>
@@ -11,6 +12,7 @@
 
 <% @works.each do |work| %>
   <tr>
+  	<td><%= work.id %></td>
     <td><%= work.serial_num %></td>
     <td><%= work.music_id %>(
     	<% if work.music != nil %>

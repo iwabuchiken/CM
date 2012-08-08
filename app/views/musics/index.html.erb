@@ -6,13 +6,8 @@
     <th>File name</th>
     <th>File path</th>
     <th>Duration</th>
-    <th>Date added</th>
-    <th>Date modified</th>
-    <th>File info</th>
-    <th>Memo self</th>
-    <th>Located at</th>
-    <th></th>
-    <th></th>
+    <th>Work</th>
+    
     <th></th>
   </tr>
 
@@ -20,16 +15,18 @@
 <% @musics.each_with_index do |music, i| %>
   <tr>
   	<td class="col_center"><%= i + 1 %></td>
-    <td><%= music.file_name %></td>
+    <td><%= link_to music.file_name, music %></td>
     <td><%= music.file_path %></td>
     <td><%= music.duration %></td>
-    <td><%= music.date_added %></td>
-    <td><%= music.date_modified %></td>
-    <td><%= music.file_info %></td>
-    <td><%= music.memo_self %></td>
-    <td><%= music.located_at %></td>
-    <td><%= link_to 'Show', music %></td>
-    <td><%= link_to 'Edit', edit_music_path(music) %></td>
+    
+    <td>
+    	<% if music.work_id != nil %>
+    		<%= music.work_id %>
+		<% else %>
+			No data
+		<% end %>
+	</td>
+    
     <td><%= link_to 'Destroy', music, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
