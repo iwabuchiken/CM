@@ -12,17 +12,25 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
+	<%= f.label :title %><br />
+		<%= f.text_field :title %>
+    	
   </div>
 
   <div class="field">
     <%= f.label :serial_num %><br />
-    <%= f.text_field :serial_num %>
+
+    	<% if @serial_num != nil %>
+    		<%= f.text_field :serial_num, :value => @serial_num %>
+		<% else %>
+			<%= f.text_field :serial_num %>
+		<% end %>
   </div>
+  
   <div class="field">
     <%= f.label :music_id %><br />
-    <%= f.number_field :music_id %>
+    <%= select("work", "music_id", Music.all.collect {|m| [m.file_name, m.id]}) %>
+    
   </div>
   <div class="actions">
     <%= f.submit %>

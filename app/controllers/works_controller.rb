@@ -26,6 +26,8 @@ class WorksController < ApplicationController
   def new
     @work = Work.new
 
+    @serial_num = Work.all.size + 1
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @work }
@@ -44,6 +46,11 @@ class WorksController < ApplicationController
 
     respond_to do |format|
       if @work.save
+        
+        music = Music.find_by_id(@work.music_id)
+        
+        music.update_attributes(:work_id => @work.id)
+        
         format.html { redirect_to @work, notice: 'Work was successfully created.' }
         format.json { render json: @work, status: :created, location: @work }
       else
