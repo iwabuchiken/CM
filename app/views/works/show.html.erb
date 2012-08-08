@@ -1,6 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <b>Work: <%= @work.id %></b>
+  
+</p>
+
+
+<p>
+  <b>Title:</b>
+  <%= @work.title %>
+</p>
+
+<p>
   <b>Serial num:</b>
   <%= @work.serial_num %>
 </p>
@@ -8,6 +19,15 @@
 <p>
   <b>Music:</b>
   <%= @work.music_id %>
+      	(
+	      	<% if @work.music != nil %>
+	    		<%= @work.music.file_name %>
+			<% else %>
+				No data
+				
+			<% end %>
+		)
+
 </p>
 
 

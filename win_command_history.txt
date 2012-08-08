@@ -118,11 +118,14 @@ rails generate migration AddColumnWorkTitle
 
 $$$ Edit: $$$
 
-bundle exec rake db:migrate
+#*bundle exec rake db:migrate
 
 $$$ commit, c/o, merge, push o, push h $$$
 
-heroku run rake db:migrate
+#*heroku run rake db:migrate
+
+
+
 
 =======================================================
 [Add column: Article 20120711_065652]-------------------------------
