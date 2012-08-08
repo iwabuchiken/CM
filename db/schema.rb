@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120728112331) do
+ActiveRecord::Schema.define(:version => 20120808033430) do
 
   create_table "memos", :force => true do |t|
     t.text     "text"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20120728112331) do
     t.string   "located_at"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.integer  "work_id"
   end
 
   create_table "work_memos", :force => true do |t|

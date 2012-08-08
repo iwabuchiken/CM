@@ -106,7 +106,11 @@ bundle exec rake db:migrate
 
 heroku run rake db:migrate
 
+rake db:seed
+
 **next**
+rails generate migration AddColumnMusicsWorkId
+
 
 =======================================================
 [Add column: Article 20120711_065652]-------------------------------
@@ -124,16 +128,6 @@ heroku run rake db:migrate
 
 # heroku run rake db:migrate
 
-[20120711_080643]-------------------------------------
-# git remote rm heroku
-# gem uninstall heroku
-
-# gem install heroku --no-ri --no-rdoc
-# heroku keys:add
-# heroku create --stack cedar
-# heroku rename cosmos-news-reader-3
-# g p heroku master
-# heroku run rake db:migrate
 
 
 ============EOF============
