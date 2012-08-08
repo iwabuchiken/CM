@@ -99,11 +99,15 @@ g c -a
 
 bundle update
 
-**next**
 rails generate scaffold Work serial_num:string music_id:integer
 rails generate scaffold WorkMemo text:string work_id:integer
 
 bundle exec rake db:migrate
+
+rake db:seed
+
+**next**
+rails generate migration AddColumnMusicsWorkId
 
 
 =======================================================
@@ -122,16 +126,6 @@ bundle exec rake db:migrate
 
 # heroku run rake db:migrate
 
-[20120711_080643]-------------------------------------
-# git remote rm heroku
-# gem uninstall heroku
-
-# gem install heroku --no-ri --no-rdoc
-# heroku keys:add
-# heroku create --stack cedar
-# heroku rename cosmos-news-reader-3
-# g p heroku master
-# heroku run rake db:migrate
 
 
 ============EOF============

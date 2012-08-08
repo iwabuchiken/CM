@@ -11,3 +11,16 @@
  *= require_self
  *= require_tree .
 */
+
+/*th.col_center {*/
+td.col_center {
+	text-align: center
+/*	text-align: center;*/
+/*	color: blue;*/
+}
+
+/* REF=> http://www.netyasun.com/home/color.html  :: Color */
+
+table, th, td {
+	border: thin #008800 solid;
+}

@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+  	<th>Num</th>
     <th>File name</th>
     <th>File path</th>
     <th>Duration</th>
@@ -15,8 +16,10 @@
     <th></th>
   </tr>
 
-<% @musics.each do |music| %>
+<%# @musics.each do |music| %>
+<% @musics.each_with_index do |music, i| %>
   <tr>
+  	<td class="col_center"><%= i + 1 %></td>
     <td><%= music.file_name %></td>
     <td><%= music.file_path %></td>
     <td><%= music.duration %></td>
@@ -35,3 +38,8 @@
 <br />
 
 <%= link_to 'New Music', new_music_path %>
+
+<hr />
+@musics.size => <%= @musics.size %>
+
+

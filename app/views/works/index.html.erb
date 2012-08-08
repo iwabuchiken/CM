@@ -12,7 +12,7 @@
 <% @works.each do |work| %>
   <tr>
     <td><%= work.serial_num %></td>
-    <td><%= work.music_id %></td>
+    <td><%= work.music_id %>(<%= work.music.file_name %>)</td>
     <td><%= link_to 'Show', work %></td>
     <td><%= link_to 'Edit', edit_work_path(work) %></td>
     <td><%= link_to 'Destroy', work, confirm: 'Are you sure?', method: :delete %></td>
