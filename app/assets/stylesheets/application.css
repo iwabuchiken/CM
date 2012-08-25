@@ -24,3 +24,7 @@ td.col_center {
 table, th, td {
 	border: thin #008800 solid;
 }
+
+.linked {
+	color: blue;
+}

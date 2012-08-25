@@ -79,6 +79,11 @@ class WorksController < ApplicationController
 
     respond_to do |format|
       if @work.update_attributes(params[:work])
+        
+        music = Music.find_by_id(@work.music_id)
+        
+        music.update_attributes(:work_id => @work.id)
+        
         format.html { redirect_to @work, notice: 'Work was successfully updated.' }
         format.json { head :no_content }
       else

@@ -1,13 +1,13 @@
 a
 cd C:\WORKS\WORKSPACES_APTANA\CM
-C:\WORKS\PROGRAMS\FreeMind\Freemind.exe
-
+C:\WORKS\PROGRAMS\FreeMind\Freemind.exe C:\WORKS\WORKSPACES_ANDROID\FM\CM\CM.mm
+gitk
 rails s --port 3000
 
 pushd C:\WORKS\WORKSPACES_APTANA\CM
 gitk
 
-C:\WORKS\PROGRAMS\FreeMind\Freemind.exe C:\WORKS\WORKSPACES_ANDROID\FM\NewsReader3_R\NewsReader3.mm
+C:\WORKS\PROGRAMS\FreeMind\Freemind.exe C:\WORKS\WORKSPACES_ANDROID\FM\CM\NewsReader3.mm
 
 
 [Git]

@@ -1,24 +1,26 @@
 
   	<th>
   	
-  		<%= link_to "Id", :controller => "works", :method => "index", :sort => "id" %>
+  		<%#= link_to "Id", {:controller => "works", :method => "index", :sort => "id"}, :class => "linked" %>
+  		<%#= link_to "Id", :controller => "works", :method => "index", :sort => "id" %>
+  		<%= link_to "Id", {:controller => "works", :action => "index", :sort => "id"}, :class => "linked" %>
   	
   	</th>
   	
   	<th>
   	
-  		<%= link_to "Title", :controller => "works", :method => "index", :sort => "title" %>
+  		<%= link_to "Title", {:controller => "works", :action => "index", :sort => "title"}, :class => "linked" %>
   		
   	</th>
   	
     <th>
     
-    	<%= link_to "Serial num", :controller => "works", :method => "index", :sort => "serial_num" %>
+    	<%= link_to "Serial num", {:controller => "works", :action => "index", :sort => "serial_num"}, :class => "linked" %>
     
     </th>
     <th>
     	
-    	<%= link_to "Music", :controller => "works", :method => "index", :sort => "music_id" %>
+    	<%= link_to "Music", {:controller => "works", :action => "index", :sort => "music_id"}, :class => "linked" %>
     	
     </th>
     <th></th>
