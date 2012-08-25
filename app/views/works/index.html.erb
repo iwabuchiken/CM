@@ -2,12 +2,13 @@
 
 <table>
   <tr>
-  	
-  	<%= render 'list_works_header' %>
-  	
+  	<th>
+  		<%= render 'list_works_header' %>
+  	</th>
   </tr>
 
-	<%= render 'list_works' %>
+	<%#= render 'list_works' %>
+	<%= render :partial => 'list_works' %>
 
 </table>
 

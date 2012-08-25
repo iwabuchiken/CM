@@ -1,0 +1,23 @@
+<table>
+	<tr>
+	  	<td><%= work.id %></td>
+	  	<td><%= work.title %></td>
+	</tr>
+	
+	<tr>
+		<td>S.N.</td>
+	    <td><%= link_to work.serial_num, work %></td>
+	</tr>
+	
+	<tr>
+	    <td>Mus.</td>
+	    <td><%= work.music_id %>(
+	    	<% if work.music != nil %>
+	    		<%= work.music.file_name %>
+			<% else %>
+				No data
+			<% end %>
+	    	
+	    	)</td>
+	</tr>
+</table>

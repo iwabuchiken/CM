@@ -1,16 +1,10 @@
 <% @works.each do |work| %>
-  <tr>
-  	<td><%= work.id %></td>
-  	<td><%= work.title %></td>
-    <td><%= link_to work.serial_num, work %></td>
-    <td><%= work.music_id %>(
-    	<% if work.music != nil %>
-    		<%= work.music.file_name %>
-		<% else %>
-			No data
-		<% end %>
-    	
-    	)</td>
-    <td><%= link_to 'Destroy', work, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+
+	<tr>
+			<%= render :partial => "item_work", :locals => {:work => work} %>
+	</tr>
+	<%#= render :partial => 'item_work ', :locals => {:work => work} %>
+	<%#= render :partial => "item_work", :locals => {:work => work} %>
+<!--     <td><%#= link_to 'Destroy', work, confirm: 'Are you sure?', method: :delete %></td> -->
+
 <% end %>
